@@ -1,0 +1,107 @@
+<header class="info-header">
+	<div class="info-image-holder">
+	<img class="info-img" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRHNxjyoTFiUto7IjQzcmzWJPOW028mpZJD70HospgbyO72uihgbA">
+	
+<br>
+<h3>May the source be with you.</h3>
+</div>
+</header>
+<div class="info-container">
+	<div class="inner-info-container">
+	<button class="btn bttn" ng-click="getPlanets()">List planets!</button>
+	<br> 
+	<input class="filters" type="text" ng-model="searchPlanet" placeholder="Filter by name...">
+	<div class="clear"></div>
+	<div class='pointer' ng-repeat="planet in planetInfo | filter:{name:searchPlanet}" ng-click="showPlanetAttributes(planet.name)">
+		{{planet.name}}
+		<br>
+		<!--<hr>-->
+		<span class="attributes" ng-show="selectedPlanet === planet.name">
+			<ul>
+				<li>
+				Climate: {{planet.climate}}
+				</li>
+				<li>
+				Terrain: {{planet.terrain}}
+				</li>
+				<li>
+				Gravity: {{planet.gravity}}
+				</li>
+				<li>
+				Orbital Period: {{planet.orbital_period}}
+				</li>
+				<li>
+				Rotation Period: {{planet.rotation_period}}
+				</li>
+				<li>
+				Population: {{planet.population}}
+				</li>
+			</ul>
+			<!--<hr>-->
+		</span>
+	</div>
+</div>
+</div>
+<div class="info-container">
+	<div class="inner-info-container">
+	<button class="btn bttn" ng-click="getCharacters()">List characters!</button>
+	<br> 
+	<input class="filters" type="text" ng-model="searchChar" placeholder="Filter by name...">
+	<div class="clear"></div>
+	<div class='pointer' ng-repeat="char in charInfo | filter:{name:searchChar}" ng-click="showCharAttributes(char.name)">
+		{{char.name}}
+		<br>
+		<!--<hr>-->
+		<span class="attributes" ng-show="selectedCharacter === char.name">
+			<ul>
+				<li>
+				Height: {{char.height}}
+				</li>
+				<li>
+				Mass: {{char.mass}}
+				</li>
+				<li>
+				Hair Color: {{char.hair_color}}
+				</li>
+				<li>
+				Skin Color: {{char.skin_color}}
+				</li>
+				<li>
+				Eye Color: {{char.eye_color}}
+				</li>
+			</ul>
+			<!--<hr>-->
+		</span>
+	</div>
+</div>
+</div>
+<div class="info-container">
+	<div class="inner-info-container">
+	<button class="btn bttn" ng-click="getStarships()">List starships!</button>
+	<br> 
+	<input class="filters" type="text" ng-model="searchStarship" placeholder="Filter by name...">
+	<div class="clear"></div>
+	<div class='pointer' ng-repeat="ship in starshipInfo | filter:{name:searchStarship}" ng-click="showStarshipAttributes(ship.name)">
+		{{ship.name}}
+		<br>
+		<!--<hr>-->
+		<span class="attributes" ng-show="selectedStarship === ship.name">
+			<ul>
+				<li>
+				Cost in Credits: {{ship.cost_in_credits}}
+				</li>
+				<li>
+				Crewmembers: {{ship.crew}}
+				</li>
+				<li>
+				Passenger Capacity: {{ship.passengers}}
+				</li>
+				<li>
+				Food/Water for: {{ship.consumables}}
+				</li>
+			</ul>
+			<!--<hr>-->
+		</span>
+	</div>
+</div>
+</div>
