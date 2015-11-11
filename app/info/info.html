@@ -8,12 +8,12 @@
 </header>
 <div class="info-container">
 	<div class="inner-info-container">
-	<button class="btn bttn" ng-click="getPlanets()">List planets!</button>
+	<button class="btn bttn" ng-click="getPlanets()">List the planets!</button>
 	<br> 
 	<input class="filters" type="text" ng-model="searchPlanet" placeholder="Filter by name...">
 	<div class="clear"></div>
-	<div class='pointer' ng-repeat="planet in planetInfo | filter:{name:searchPlanet}" ng-click="showPlanetAttributes(planet.name)">
-		{{planet.name}}
+	<div ng-class="{highlite: $index === selected}" class='pointer' ng-repeat="planet in planetInfo | filter:{name:searchPlanet}" ng-click="showPlanetAttributes(planet.name); select($index)">
+		<span>{{planet.name}}</span>
 		<br>
 		<!--<hr>-->
 		<span class="attributes" ng-show="selectedPlanet === planet.name">
@@ -44,11 +44,11 @@
 </div>
 <div class="info-container">
 	<div class="inner-info-container">
-	<button class="btn bttn" ng-click="getCharacters()">List characters!</button>
+	<button class="btn bttn" ng-click="getCharacters()">List the characters!</button>
 	<br> 
 	<input class="filters" type="text" ng-model="searchChar" placeholder="Filter by name...">
 	<div class="clear"></div>
-	<div class='pointer' ng-repeat="char in charInfo | filter:{name:searchChar}" ng-click="showCharAttributes(char.name)">
+	<div ng-class="{highlite: $index === selected}" class='pointer' ng-repeat="char in charInfo | filter:{name:searchChar}" ng-click="showCharAttributes(char.name); select($index)">
 		{{char.name}}
 		<br>
 		<!--<hr>-->
@@ -75,13 +75,14 @@
 	</div>
 </div>
 </div>
+
 <div class="info-container">
 	<div class="inner-info-container">
-	<button class="btn bttn" ng-click="getStarships()">List starships!</button>
+	<button class="btn bttn" ng-click="getStarships()">List the starships!</button>
 	<br> 
 	<input class="filters" type="text" ng-model="searchStarship" placeholder="Filter by name...">
 	<div class="clear"></div>
-	<div class='pointer' ng-repeat="ship in starshipInfo | filter:{name:searchStarship}" ng-click="showStarshipAttributes(ship.name)">
+	<div ng-class="{highlite: $index === selected}" class='pointer' ng-repeat="ship in starshipInfo | filter:{name:searchStarship}" ng-click="showStarshipAttributes(ship.name); select($index)">
 		{{ship.name}}
 		<br>
 		<!--<hr>-->
@@ -104,4 +105,13 @@
 		</span>
 	</div>
 </div>
+</div>
+<div ng-show='showLoadingPlanets' class="loading planets">
+	Loading...
+</div>
+<div ng-show='showLoadingChars' class="loading characters">
+	Loading...
+</div>
+<div ng-show='showLoadingStarships' class="loading starships">
+	Loading...
 </div>

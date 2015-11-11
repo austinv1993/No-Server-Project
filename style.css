@@ -1,6 +1,4 @@
-* {
-	
-}
+
 html, body {
 	background-image: url(https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTgZeOKADFQ5agUYo3ZRzWrfUB15XR77W-alDm8Q_zAwmTzgAbQ_A);
 	color: white;
@@ -9,7 +7,7 @@ html, body {
 .header {
 	width: 100%;
 	/*text-align: center;*/
-	margin-bottom: 20px;
+	/*margin-bottom: 20px;*/
 	/*background-color: red;*/
 	
 	
@@ -31,13 +29,33 @@ html, body {
 			display: block;
 			margin: 0 auto;
 		}
-		.header-text {
-			text-align: center;
-		}
+		
 	.right {
 		width: 25%;
 		float: left;
 	}
+.body-container {
+	clear: both;
+}
+.cast {
+	clear: both;
+	width: 250px;
+	text-align: center;
+	margin-top: 100px;
+	float: left;
+	padding-left: 50px;
+}
+.tfa {
+	display: block;
+	float: left;
+	margin-top: 100px;
+	margin-left: 210px;
+}
+.release-date {
+	margin-top: 100px;
+	text-align: center;
+	
+}
 	
 a:link {
 	color: green;
@@ -52,10 +70,6 @@ a:active {
 	.src {
 		margin-left: 615px;
 	}
-.tfa {
-	display: block;
-	margin: 0 auto;
-}
 
 .info-image-holder {
 	text-align: center;
@@ -66,14 +80,6 @@ a:active {
 	margin: 0 auto;
 	overflow: auto;
 }
-/*.character-container {
-	width: 80%;
-	float: left;
-}
-.starship-container {
-	width: 80%;
-	float: left;
-}*/
 .pointer {
 	cursor: pointer;
 }
@@ -83,6 +89,7 @@ a:active {
 	text-align: center;
 	border-style: double;
 	margin-left: 30px;
+	border-radius: 5px;
 	
 }
 .carousel-images {
@@ -139,4 +146,19 @@ a:active {
 }
 .filters {
 	color: black;
+}
+.title {
+	text-align: center;
+	font-size: large;
+}
+.loading {
+	width: 30%;
+	float: left;
+	margin-left: 30px;
+}
+.highlite {
+	color: yellow;
+}
+.highlite li {
+	color: white;
 }
