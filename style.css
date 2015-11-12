@@ -34,6 +34,10 @@ html, body {
 		width: 25%;
 		float: left;
 	}
+h5 {
+	line-height: 1.75;
+	padding: 15px;
+}
 .body-container {
 	clear: both;
 }
@@ -141,6 +145,10 @@ a:active {
 }*/
 .pageLinks {
 	margin: 5px;
+	border: 1px solid grey;
+	padding: 4px;
+	font-size: large;
+	display: inline-block;
 }
 .backstory {
 	margin: 0 150px;
@@ -157,7 +165,12 @@ a:active {
 	width: 30%;
 	float: left;
 	margin-left: 30px;
+	
+	height: 20px;
 }
+	.characters {
+		
+	}
 .highlite {
 	color: yellow;
 }
